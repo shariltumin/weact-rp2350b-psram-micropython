@@ -14,11 +14,15 @@ However, at the moment, stock MicroPython does not yet support PSRAM on this boa
 
 Before enabling PSRAM support in software, the first step is to physically add, for example, the ESP-PSRAM64H chip to the board. The WeAct RP2350B has a designated spot on the flip-side of the PCB for this SOP8 package chip, and it’s important to ensure proper orientation before soldering.
 
+![psram](fotos/psram.jpg)
+
 For best results, it's recommended to use low-melting solder with a 60% tin, 40% lead composition. This type of solder makes it easier to achieve clean joints with less risk of overheating the chip. Since the ESP-PSRAM64H is quite small, a fine-tip soldering iron is essential for precise work.
 
 Start by identifying the dot or marking on the chip, which aligns with the designated pin marker on the PCB. Proper alignment is crucial to avoid potential damage. If needed, apply a small amount of flux and pre-tin the solder pads to ensure better adhesion. Carefully position the chip and solder each pin, taking care not to apply excessive heat.
 
 Once soldering is complete, inspect the connections closely. Using a magnifying glass or microscope can help spot any bridged pins or weak joints. A quick continuity test with a multimeter can further confirm that all connections are solid.
+
+![psram_soldered](fotos/psram_soldered.jpg)
 
 With the PSRAM chip securely in place, we can now move on to testing and compiling MicroPython with PSRAM support. Since the stock MicroPython firmware does not yet support PSRAM on the WeAct RP2350B, we will use a custom branch from Pimoroni that includes the necessary modifications.
 
