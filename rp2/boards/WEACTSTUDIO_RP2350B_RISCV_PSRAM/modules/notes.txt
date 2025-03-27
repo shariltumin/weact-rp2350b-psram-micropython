@@ -1,0 +1,2 @@
+Here is where you defined all your python modules to be included into the firmware as frozen mpy.
+
